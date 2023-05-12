@@ -34,12 +34,7 @@ jobs:
         name: Run tests and collect coverage
         command: mvn -B test
 
-      - run:
-        name: Upload coverage report to Codecov
-        command: |
-          curl -Os https://uploader.codecov.io/latest/macos/codecov
-          chmod +x codecov
-          ./codecov
+      - codecov/upload
 
 
 # Invoke jobs via workflows
