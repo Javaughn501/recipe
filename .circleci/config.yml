@@ -31,8 +31,8 @@ jobs:
 
       # run tests! and gen code coverage
       - run:
-        name: Run tests and collect coverage
-        command: mvn -B test
+          name: Run tests and collect coverage
+          command: mvn -B test
 
       - codecov/upload
 
